@@ -38,24 +38,24 @@ Se pueden consultar detalles de cada película: título, año, género, director
 com.example.examenbuscadordepeliculas/
 │
 ├── activities/
-│ ├── MainActivity.kt
-│ └── DetailActivity.kt
+│   ├── MainActivity.kt
+│   └── DetailActivity.kt
 │
 ├── adapters/
-│ └── MovieAdapter.kt
+│   └── MovieAdapter.kt
 │
 ├── data/
-│ ├── Movie.kt
-│ ├── MovieResponse.kt
-│ └── MovieDetail.kt
+│   ├── Movie.kt
+│   ├── MovieResponse.kt
+│   └── MovieDetail.kt
 │
 ├── utils/
-│ └── ApiService.kt
+│   └── ApiService.kt
 │
 └── res/layout/
-├── activity_main.xml
-├── activity_detail.xml
-└── item_movie.xml
+    ├── activity_main.xml
+    ├── activity_detail.xml
+    └── item_movie.xml
 
 ---
 
@@ -89,7 +89,7 @@ Clonar el repositorio:
 2. Abrir en Android Studio
 3. Insertar tu API Key
 4. Ejecutar en un emulador o dispositivo Android
-5. 
+
 ## 🎨 Diseño Retro
 
 - Fondo oscuro (#0A0A0A)
@@ -100,8 +100,8 @@ Clonar el repositorio:
   
 ## 👨‍💻 Autor
 
-Nombre: Mario Cavero Perez
-Curso: Desarrollo de aplicaciones con dispositivos moviles
-Proyecto: Examen Buscador de Películas
+- Nombre: Mario Cavero Perez
+- Curso: Desarrollo de aplicaciones con dispositivos moviles
+- Proyecto: Examen Buscador de Películas
 
 “Porque el cine no solo se ve… también se siente en 8 bits.” 💾
