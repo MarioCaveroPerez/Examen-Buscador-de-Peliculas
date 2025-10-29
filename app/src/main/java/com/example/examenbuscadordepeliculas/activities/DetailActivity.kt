@@ -21,6 +21,8 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var tvDirector: TextView
     private lateinit var tvCountry: TextView
     private lateinit var tvPlot: TextView
+    private var imdbID: String? = null
+    private var movieDetail: MovieDetail? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,26 +37,31 @@ class DetailActivity : AppCompatActivity() {
         tvCountry = findViewById(R.id.tvCountry)
         tvPlot = findViewById(R.id.tvPlot)
 
-        val imdbID = intent.getStringExtra("imdbID")
-        if (imdbID != null) loadMovieDetail(imdbID)
+        imdbID = intent.getStringExtra("imdbID")
+
+        if (imdbID != null) loadMovieDetail(imdbID!!)
     }
 
     private fun loadMovieDetail(imdbID: String) {
         thread {
             val response = ApiService.getMovieDetail(imdbID)
             if (response != null) {
-                val movieDetail = Gson().fromJson(response, MovieDetail::class.java)
+                val detail = Gson().fromJson(response, MovieDetail::class.java)
+                movieDetail = detail
+
                 runOnUiThread {
-                    tvTitle.text = movieDetail.Title
-                    tvYear.text = "Año: ${movieDetail.Year}"
-                    tvRuntime.text = "Duración: ${movieDetail.Runtime}"
-                    tvGenre.text = "Género: ${movieDetail.Genre}"
-                    tvDirector.text = "Director: ${movieDetail.Director}"
-                    tvCountry.text = "País: ${movieDetail.Country}"
-                    tvPlot.text = "Sinopsis: ${movieDetail.Plot}"
-                    Picasso.get().load(movieDetail.Poster).into(ivPosterDetail)
+                    tvTitle.text = detail.Title
+                    tvYear.text = "Año: ${detail.Year}"
+                    tvRuntime.text = "Duración: ${detail.Runtime}"
+                    tvGenre.text = "Género: ${detail.Genre}"
+                    tvDirector.text = "Director: ${detail.Director}"
+                    tvCountry.text = "País: ${detail.Country}"
+                    tvPlot.text = "Sinopsis: ${detail.Plot}"
+                    Picasso.get().load(detail.Poster).into(ivPosterDetail)
+
                 }
             }
         }
     }
+
 }
