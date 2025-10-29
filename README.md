@@ -35,27 +35,29 @@ Se pueden consultar detalles de cada película: título, año, género, director
 
 ## 📂 Estructura del proyecto
 
+```
 📂 com.example.examenbuscadordepeliculas/
 │
 ├── 📂 activities/
-│   ├── 📄 MainActivity.kt
-│   └── 📄 DetailActivity.kt
+│ ├── 📄 MainActivity.kt
+│ └── 📄 DetailActivity.kt
 │
 ├── 📂 adapters/
-│   └── 📄 MovieAdapter.kt
+│ └── 📄 MovieAdapter.kt
 │
 ├── 📂 data/
-│   ├── 📄 Movie.kt
-│   ├── 📄 MovieResponse.kt
-│   └── 📄 MovieDetail.kt
+│ ├── 📄 Movie.kt
+│ ├── 📄 MovieResponse.kt
+│ └── 📄 MovieDetail.kt
 │
 ├── 📂 utils/
-│   └── 📄 ApiService.kt
+│ └── 📄 ApiService.kt
 │
 └── 📂 res/layout/
-    ├── 📄 activity_main.xml
-    ├── 📄 activity_detail.xml
-    └── 📄 item_movie.xml
+├── 📄 activity_main.xml
+├── 📄 activity_detail.xml
+└── 📄 item_movie.xml
+```
 
 ---
 
