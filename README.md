@@ -8,9 +8,6 @@
 
 ---
 
-## 🌟 Demo
-
-![Demo Retro Movie Finder](https://via.placeholder.com/600x400?text=Retro+Movie+Finder+Demo)
 
 🎥 La app muestra un catálogo de películas con **estilo VHS**, colores neón y tipografía monospace.  
 Se pueden consultar detalles de cada película: título, año, género, director, país, duración y sinopsis.
